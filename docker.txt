@@ -1,16 +1,35 @@
-Why use Docker ?
+1. Why use Docker ?
 Docker makes it really easy to install and run software without worrying about setup or dependencies 
 
-What is Docker ?
+2. What is Docker ?
 Docker is a platform or ecosystem around creating and running containers.
 Docker ecosystem has:
 Docker client, Docker server, Docker machine, Docker images, Docker Hub, Docker compose 
 
-What is image ?
-Single file with all the dependencies and config required to run a program 
+3. What is image ?
+Single file with all the dependencies and config required to run a program. It has File System Snapshot and Startup command. 
 
-What is Container ?
+4. What is Container ?
 Instance of an image. Runs a program. It has its own storage, networking, memory. 
 
-Docker Client (Docker CLI) - Tool that we are going to issue commands to 
+5. Docker Client (Docker CLI) - Tool that we are going to issue commands to 
 Docker Server (Docker Daemon) - Tool that is responsible for creating images, running containers, etc. 
+
+6. Test the following command: To create and run a container from an image. 
+  docker run hello-world
+
+  Output:
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+
