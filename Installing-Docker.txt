@@ -1,0 +1,196 @@
+Home
+Docker and Kubernetes: The Complete Guide
+Installing Docker with WSL on Windows 10/11
+This note will provide detailed steps and instructions to install Docker and signup for a DockerHub account on Windows with WSL. We will need a DockerHub account so that we can pull images and push the images we will build.
+
+Windows 10 & 11 users will be able to install Docker Desktop if their computer supports the Windows Subsystem for Linux (WSL).
+
+Register for a DockerHub account
+
+Visit the link below to register for a DockerHub account (this is free)
+
+https://hub.docker.com/signup
+
+Download and install all pending Windows OS updates
+
+Run the WSL install script
+
+Note - If you have previously enabled WSL and installed a distribution you may skip to step #7
+
+Open PowerShell as Administrator and run: wsl --install
+This will enable and install all required features as well as install Ubuntu.
+
+
+Official documentation:
+
+https://docs.microsoft.com/en-us/windows/wsl/install#install-wsl-command
+
+Reboot your computer
+
+Set a Username and Password in Ubuntu
+
+After the reboot, Windows will auto-launch your new Ubuntu OS and prompt you to set a username and password.
+
+
+Manually Installing a Distribution
+If for some reason Windows did not prompt you to create a distribution or you simply would like to create a new one, you can do so by running the following command:
+wsl --install -d Ubuntu
+
+Install Docker Desktop
+
+Navigate to the Docker Desktop installation page and click the Docker Desktop for Windows button:
+
+https://docs.docker.com/desktop/install/windows-install/
+
+
+Double-click the Docker Desktop Installer from your Downloads folder
+
+Click "Install anyway" if warned the app isn't Microsoft-verified
+
+Click "OK" to Add a shortcut to the Desktop
+
+
+Click "Close" when you see Installation succeeded message
+
+
+Double-click the Docker Desktop icon on your Desktop
+
+Accept the Docker Service Agreement
+
+
+Docker Desktop will launch for the first time
+
+Docker Desktop will launch and present you with a tutorial. You are free to skip this.
+
+
+Ensure that WSL Integration is Enabled
+
+In Docker Desktop, click the Settings Gear icon. Then choose Resources, and finally WSL Integration. Make sure that the Enable Integration with my default WSL distro is checked. Also, if you are using multiple distributions, make sure that these additional distros are toggled on:
+
+
+
+
+Open your Distro
+
+Using the Windows Search feature in the toolbar, type the name of your distribution (by default it is Ubuntu) and click Open:
+
+
+Check that Docker is working
+
+Using the terminal for your distro, run the docker command. If all is well you should see some helpful instructions in the output similar to below:
+
+
+Log in to Docker
+
+Using the terminal for your distro, run the docker login command. You will be prompted to enter the username and password (or your Personal Access Token) you created earlier when registering for a DockerHub account. Once you see Login Succeeded, the setup is complete and you are free to continue to the next lecture.
+
+Appendix
+
+A significant difference when using WSL is that you will need to create and run your project files from within the Linux filesystem, not the Windows filesystem. This will be very important in later lectures when we cover volumes.
+
+You can access your Linux system by using the Windows Search feature in the toolbar and typing the name of your distribution (by default it is Ubuntu) and clicking open (see step #16 above).  This terminal should automatically open to the home directory on the Linux filesystem
+
+Going forward, all Docker commands should be run within WSL and not on the Windows file system
+
+Resources for this lecture
+Build, test, and deploy Docker applications with Kubernetes while learning production-style development workflows
+Rating: 4.6 out of 5
+4.6
+55,750 ratings
+291,503
+Students
+22.5 hours
+Total
+Last updated September 2023
+English
+English [CC], Arabic [Auto]
+, 
+What you'll learn
+Learn Docker from scratch, no previous experience required
+Master the Docker CLI to inspect and debug running containers
+Build a CI + CD pipeline from scratch with Github, Travis CI, and AWS
+Understand the purpose and theory of Kubernetes by building a complex app
+Automatically deploy your code when it is pushed to Github!
+Description
+If you're tired of spinning your wheels learning how to deploy web applications, this is the course for you.
+
+
+
+CI+CD Workflows? You will learn it.  AWS Deployment? Included.  Kubernetes in Production? Of course!
+
+This is the ultimate course to learn how to deploy any web application you can possibly dream up.  Docker and Kubernetes are the newest tech in the Dev Ops world, and have dramatically changed the flow of creating and deploying web apps.  Docker is a technology that allows applications to run in constructs called 'containers', while Kubernetes allows for many different 'containers' to run in coordination.
+
+
+
+Docker from Scratch!
+
+In this course you'll learn Docker from absolute fundamentals, beginning by learning the answer to basic questions such as "What is a container?" and "How does a container work?".  From the very first few lectures, we will do a deep dive on the inner workings of containers, so you get a core understanding of exactly how they are implemented.  Once you understand what a container is, you'll learn how to work with them using basic Docker CLI commands.  After that, you'll apply your new-found mastery of the Docker CLI to build your own custom images, effectively 'Dockerizing' your own personal applications. 
+
+
+
+CI + CD Pipelines
+
+Of course, no course on Docker would be complete without a full understanding of common Continuous Integration and Continuous Deployment patterns.  You will learn how to implement a full CI + CD workflow using Github, Travis CI, and Amazon Web Services, creating a pipeline that automatically deploys your code every time you push your latest changes to Github!
+
+
+
+Multi-Container Deployments on AWS!
+
+After building a deployment pipeline, you'll apply it to master both single-container and multi-container deployments on Amazon Web Services.  You will construct a multi-container application utilizing Node, React, Redis, and Postgres, and see the amazing power of containers in action (Note: all Javascript coding in this course is optional, the full source code is provided if you don't want to write JS).
+
+
+
+Kubernetes!
+
+Finally, you will tackle Kubernetes, a production-grade system for managing complex applications with many different running containers.  You will learn the right way to build a Kubernetes Cluster - this course doesn't have any of those annoying "don't do this in production" comments!  You will first build a Kubernetes Cluster on your local machine, then eventually move it over to a cloud provider.  You'll even learn how to set up HTTPS on Kubernetes, which is harder than it sounds!
+
+
+
+Here's what you'll do:
+
+Learn Docker from scratch, no previous experience required
+
+Build your own custom images tailored to your applications
+
+Master the Docker CLI to inspect and debug running containers
+
+Understand how Docker works behind the scenes, and what a container is
+
+Build a CI + CD pipeline from scratch with Github, Travis CI, and AWS
+
+Automatically deploy your code when it is pushed to Github!
+
+Build a complex multi-container application from scratch and deploy it to AWS
+
+Understand the purpose and theory of Kubernetes
+
+Deploy a production-ready Kubernetes Cluster to Google Cloud
+
+Who this course is for:
+Software engineers looking to deploy their apps easily and quickly
+Instructor
+Stephen Grider
+Engineering Architect
+Stephen Grider has been building complex Javascript front ends for top corporations in the San Francisco Bay Area.  With an innate ability to simplify complex topics, Stephen has been mentoring engineers beginning their careers in software development for years, and has now expanded that experience onto Udemy, authoring the highest rated React course. He teaches on Udemy to share the knowledge he has gained with other software engineers.  Invest in yourself by learning from Stephen's published courses.
+
+Featured review
+Luca G.
+181 courses
+21 reviews
+Rating: 4.5 out of 5
+4 years ago
+I waited to write the review almost until the end of the course and I can say that it is very very good. I love how the teacher explain the concepts, the diagrams he uses and how he goes deep, step-by-step, for each concept. Really one of the best I had on Udemy. The only thing that I can complain is that he speak too fast and jump to different screens rapidly, sometime doesn't let the time to properly understand the concept and I had to repeat or slow down the video.
+Was this review helpful?
+
+Requirements
+Basic understanding of terminal and command line usage
+No previous Docker or Kubernetes experience is required!
+A credit card is required to deploy projects to AWS or Google Cloud
+Get the app
+About us
+Help and Support
+Terms
+Privacy policy
+Sitemap
+Accessibility statement
+© 2023 Udemy, Inc.
