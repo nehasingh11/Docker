@@ -38,3 +38,8 @@
    If you are a Windows user you may get an error like "/bin/sh: [redis-server]: not found" or "No Such Container"
    Instead, try running the command like this:
    docker commit -c "CMD 'redis-server'" CONTAINERID
+
+8. Buildkit will hide away much of its progress which is something the legacy builder did not do. In the upcoming lectures will be discussing some output that will be quickly hidden by default. In order to see this output, you will want to pass the progress flag to the build command:
+   docker build --progress=plain .
+   Additionally, you may also want to pass the no-cache flag:
+   docker build --no-cache --progress=plain .
